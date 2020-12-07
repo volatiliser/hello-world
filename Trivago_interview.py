@@ -23,16 +23,6 @@
 # f(x)=3x+1 mod 10
 
 
-*** Settings ***
-
-
-*** Variables ***
-
-
-*** Test Cases ***
-
-
-*** Keywords ***
 
 
 
