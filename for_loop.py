@@ -5,7 +5,7 @@ def prime(num):
             return False
     return True
 
-print(prime(36))
+# print(prime(36))
 
 
 # 第一個參數 任意長度一個字串【】，第二個參數是一個>0的整數
@@ -16,7 +16,7 @@ def repeat(string, num):
         result = result + string
     return result
 
-print(repeat('you', 3))
+# print(repeat('you', 3))
 
 
 # 給一個目標數，列出小於目標數的list
@@ -27,14 +27,14 @@ def solution(nums,target):
             ary.append(num)
     return ary
 
-nums = [2, 7, 11, 13, 19]
-print(solution(nums,10))
+# nums = [2, 7, 11, 13, 19]
+# print(solution(nums,10))
 
-nums = [99, 7, 1, 2]
-print(solution(nums,3))
+# nums = [99, 7, 1, 2]
+# print(solution(nums,3))
 
-nums = [-4, 54, 30, 2]
-print(solution(nums,100))
+# nums = [-4, 54, 30, 2]
+# print(solution(nums,100))
 
 
 # 求1+N的總和
@@ -44,7 +44,7 @@ def solution(num):
         sum = sum + i
     return sum
 
-print(solution(10))
+# print(solution(10))
 
 
 # 求2的N平方等於多少
@@ -54,8 +54,8 @@ def solution2(n):
         total = total * 2
     return total
 
-print(solution2(0))
-print(solution2(3))
+# print(solution2(0))
+# print(solution2(3))
 
 
 # 求平均值
@@ -70,7 +70,7 @@ def average(nums):
     ans = sum / len(nums)
     return ans
 
-print(average(input1))
+# print(average(input1))
 
 
 # 求成績區間
@@ -107,7 +107,7 @@ def swap3(ary):
     ary[1] = result1
     return ary
 
-print(swap3([4,5]))
+# print(swap3([4,5]))
 
 
 # 求最大值
@@ -120,3 +120,51 @@ def largest(ary):
     return temp
 
 # print(largest([2,1,4,5,8]))
+
+
+def printLadder(n):
+    for i in range(1, n + 1):
+        for j in range(i):
+            print('*', end='')
+        print('')
+
+printLadder(5);
+
+def printLadder2(n):
+    for i in range(1, n + 1):
+        printNthRow(i)
+
+# range(0) == range(0, 0, 1): no loop
+# range(1) == range(0, 1, 1): i=0
+# range(n) == range(0, n, 1): i=0, 1, ..., n - 1 
+
+def printNthRow(n):
+    for i in range(n):
+        print('*', end='') # row content
+    print('') # end of the row
+
+printLadder2(3)
+
+def printLadder3(n):
+    for i in range(1, n + 1):
+        print(nStars(i)) # equals to print(i * '*')
+
+def nStars(n):
+    stars = ''
+    for i in range(n):
+        stars = stars + '*'
+    return stars
+
+printLadder3(6)
+
+def printLadder4(n):
+    for i in range(1, n + 1):
+        print(repeat('*', i))
+
+def repeat(str, n):
+    result = ''
+    for i in range(n):
+        result = result + str
+    return result
+
+printLadder4(10)

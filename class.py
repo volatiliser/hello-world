@@ -7,4 +7,3 @@ def __init__(self, color, seat):
 # 方法(Method)
 def drive(self):
     print(f"My car is {self.color} and {self.seat} seats.")
-
